@@ -6,7 +6,6 @@ document.addEventListener('DOMContentLoaded', function() {
     initTypingEffect();
     initStatsCounter();
     initSmoothScrolling();
-    initContactForm();
     initParticleEffect();
 });
 
@@ -77,32 +76,30 @@ function initScrollAnimations() {
         });
     }, observerOptions);
 
-    // Observe elements for animation
-    const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in');
-    animatedElements.forEach(el => observer.observe(el));
-
-    // Add animation classes to elements
+    // Add animation classes to elements first
     const aboutContent = document.querySelector('.about-content .about-text');
     const aboutVisual = document.querySelector('.about-visual');
-    const skillCategories = document.querySelectorAll('.skill-category');
+    const skillTiles = document.querySelectorAll('.skill-tile');
     const projectCards = document.querySelectorAll('.project-card');
     const contactInfo = document.querySelector('.contact-info');
-    const contactForm = document.querySelector('.contact-form');
 
     if (aboutContent) aboutContent.classList.add('slide-in-left');
     if (aboutVisual) aboutVisual.classList.add('slide-in-right');
     if (contactInfo) contactInfo.classList.add('slide-in-left');
-    if (contactForm) contactForm.classList.add('slide-in-right');
 
-    skillCategories.forEach((category, index) => {
-        category.classList.add('fade-in');
-        category.style.animationDelay = `${index * 0.2}s`;
+    skillTiles.forEach((tile, index) => {
+        tile.classList.add('fade-in');
+        tile.style.animationDelay = `${index * 0.05}s`;
     });
 
     projectCards.forEach((card, index) => {
         card.classList.add('scale-in');
         card.style.animationDelay = `${index * 0.2}s`;
     });
+
+    // Now observe all animated elements (after classes are added)
+    const animatedElements = document.querySelectorAll('.fade-in, .slide-in-left, .slide-in-right, .scale-in');
+    animatedElements.forEach(el => observer.observe(el));
 }
 
 // Typing effect for hero section
@@ -205,113 +202,6 @@ function initSmoothScrolling() {
             }
         });
     });
-}
-
-// Contact form functionality
-function initContactForm() {
-    const contactForm = document.querySelector('.contact-form');
-    
-    if (contactForm) {
-        contactForm.addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            // Get form data
-            const formData = new FormData(this);
-            const name = document.getElementById('name').value;
-            const email = document.getElementById('email').value;
-            const subject = document.getElementById('subject').value;
-            const message = document.getElementById('message').value;
-            
-            // Simple validation
-            if (!name || !email || !subject || !message) {
-                showNotification('Please fill in all fields', 'error');
-                return;
-            }
-            
-            if (!isValidEmail(email)) {
-                showNotification('Please enter a valid email address', 'error');
-                return;
-            }
-            
-            // Simulate form submission
-            const submitButton = this.querySelector('.btn');
-            const originalText = submitButton.textContent;
-            
-            submitButton.textContent = 'Sending...';
-            submitButton.disabled = true;
-            
-            setTimeout(() => {
-                showNotification('Message sent successfully! I\'ll get back to you soon.', 'success');
-                contactForm.reset();
-                submitButton.textContent = originalText;
-                submitButton.disabled = false;
-            }, 2000);
-        });
-    }
-}
-
-// Email validation
-function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
-
-// Notification system
-function showNotification(message, type = 'info') {
-    // Remove existing notifications
-    const existingNotification = document.querySelector('.notification');
-    if (existingNotification) {
-        existingNotification.remove();
-    }
-    
-    // Create notification element
-    const notification = document.createElement('div');
-    notification.className = `notification notification-${type}`;
-    notification.innerHTML = `
-        <div class="notification-content">
-            <span class="notification-message">${message}</span>
-            <button class="notification-close">&times;</button>
-        </div>
-    `;
-    
-    // Add styles
-    notification.style.cssText = `
-        position: fixed;
-        top: 100px;
-        right: 20px;
-        background: ${type === 'success' ? '#4CAF50' : type === 'error' ? '#f44336' : '#2196F3'};
-        color: white;
-        padding: 1rem 1.5rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        z-index: 10000;
-        transform: translateX(400px);
-        transition: transform 0.3s ease;
-        max-width: 300px;
-    `;
-    
-    // Add to page
-    document.body.appendChild(notification);
-    
-    // Animate in
-    setTimeout(() => {
-        notification.style.transform = 'translateX(0)';
-    }, 100);
-    
-    // Close functionality
-    const closeBtn = notification.querySelector('.notification-close');
-    closeBtn.addEventListener('click', () => {
-        notification.style.transform = 'translateX(400px)';
-        setTimeout(() => notification.remove(), 300);
-    });
-    
-    // Auto remove after 5 seconds
-    setTimeout(() => {
-        if (notification.parentElement) {
-            notification.style.transform = 'translateX(400px)';
-            setTimeout(() => notification.remove(), 300);
-        }
-    }, 5000);
 }
 
 // Particle effect for hero section
