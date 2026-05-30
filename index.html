@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Siva Prasath K | Software Developer</title>
+    <meta name="description" content="Siva Prasath K - MCA fresher and Full-Stack &amp; Mobile Developer skilled in Flutter, Firebase, Python, and Supabase. Available for internship and entry-level roles.">
+    <meta property="og:title" content="Siva Prasath K | Software Developer">
+    <meta property="og:description" content="Flutter - Firebase - Python - Full-Stack">
+    <meta property="og:url" content="https://shivaprasath.codes">
+    <meta property="og:type" content="website">
+    <link rel="canonical" href="https://shivaprasath.codes">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loader-wrapper" id="loader">
+        <div class="loader">
+            <div class="loader-circle"></div>
+            <div class="loader-text">SP</div>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress" id="scroll-progress"></div>
+
+    <!-- Neural Network Background -->
+    <canvas id="neural-canvas"></canvas>
+
+    <!-- Cursor Waving Text -->
+    <div class="cursor-wave-text" id="cursorWaveText"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">
+                <div class="logo-icon">
+                    <span class="logo-initial">S</span>
+                    <span class="logo-initial">P</span>
+                </div>
+                <span class="logo-text">Siva Prasath</span>
+            </a>
+            <ul class="nav-menu" id="nav-menu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Tech Stack</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-container">
+            <div class="hero-content">
+                <p class="hero-greeting" data-aos="fade-up">Welcome</p>
+                <h1 class="hero-name gradient-text" data-aos="fade-up" data-aos-delay="100">Hi, I'm Siva Prasath K</h1>
+                <h2 class="hero-title" data-aos="fade-up" data-aos-delay="200"><span id="typing-text"></span><span class="typing-cursor">|</span></h2>
+                <p class="hero-tagline" data-aos="fade-up" data-aos-delay="300">MCA fresher building production-grade mobile &amp; full-stack apps using Flutter, Firebase, Python, and Supabase.</p>
+                <div class="hero-buttons" data-aos="fade-up" data-aos-delay="400">
+                    <a href="#projects" class="btn btn-primary glow-btn">
+                        <span>View Projects</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="/assets/resume.pdf" class="btn btn-secondary glow-btn" target="_blank" rel="noopener noreferrer">
+                        <span>Download CV</span>
+                        <i class="fas fa-download"></i>
+                    </a>
+                </div>
+                <div class="social-links" data-aos="fade-up" data-aos-delay="500">
+                    <a href="https://github.com/prasathshiva81-stack" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="https://linkedin.com/in/siva-prasath-333704325" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:prasathshiva81@gmail.com" class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="hero-decoration">
+                <div class="floating-icon icon-1"><i class="fab fa-react"></i></div>
+                <div class="floating-icon icon-2"><i class="fab fa-node-js"></i></div>
+                <div class="floating-icon icon-3"><i class="fab fa-python"></i></div>
+                <div class="floating-icon icon-4"><i class="fab fa-js"></i></div>
+                <div class="floating-icon icon-5"><i class="fas fa-database"></i></div>
+                <div class="floating-icon icon-6"><i class="fab fa-google"></i></div>
+                
+                <!-- Animated Code Window -->
+                <div class="code-window" data-aos="fade-left" data-aos-delay="600">
+                    <div class="code-window-header">
+                        <div class="window-dots">
+                            <span class="dot dot-red"></span>
+                            <span class="dot dot-yellow"></span>
+                            <span class="dot dot-green"></span>
+                        </div>
+                        <div class="window-title">developer.js</div>
+                    </div>
+                    <div class="code-window-body">
+                        <div class="code-line"><span class="code-keyword">const</span> <span class="code-variable">developer</span> <span class="code-operator">=</span> <span class="code-bracket">{</span></div>
+                        <div class="code-line">  <span class="code-property">name</span><span class="code-operator">:</span> <span class="code-string">"Siva Prasath K"</span><span class="code-punctuation">,</span></div>
+                        <div class="code-line">  <span class="code-property">role</span><span class="code-operator">:</span> <span class="code-string">"Flutter &amp; Full-Stack Developer"</span><span class="code-punctuation">,</span></div>
+                        <div class="code-line">  <span class="code-property">skills</span><span class="code-operator">:</span> <span class="code-bracket">[</span><span class="code-string">"Flutter"</span><span class="code-punctuation">,</span><span class="code-string">"Firebase"</span><span class="code-punctuation">,</span><span class="code-string">"Python"</span><span class="code-punctuation">,</span><span class="code-string">"Supabase"</span><span class="code-bracket">]</span><span class="code-punctuation">,</span></div>
+                        <div class="code-line">  <span class="code-property">passion</span><span class="code-operator">:</span> <span class="code-string">"Building production-grade apps"</span></div>
+                        <div class="code-line"><span class="code-bracket">}</span><span class="code-operator">;</span></div>
+                        <div class="code-cursor"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title gradient-text">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm an MCA student at Pondicherry University (graduating May 2026) and a self-taught Full-Stack &amp; Mobile Developer. I've independently built and shipped 3 production-grade applications covering real-time systems, AI-powered features, and hyperlocal services - owning the complete SDLC from system design to deployment. Open to Internship, Trainee, or Entry-Level roles in Flutter / Mobile / Full-Stack Python in Bangalore, Chennai, or Kerala.</p>
+                    <p class="about-location"><i class="fas fa-map-marker-alt"></i> Puducherry, India</p>
+                    
+                    <div class="skills-summary">
+                        <div class="skill-category">
+                            <h3><i class="fas fa-code"></i> Skilled In</h3>
+                            <div class="skill-tags">
+                                <span class="skill-tag">Flutter</span>
+                                <span class="skill-tag">Firebase</span>
+                                <span class="skill-tag">Supabase</span>
+                                <span class="skill-tag">Python</span>
+                                <span class="skill-tag">JavaScript</span>
+                                <span class="skill-tag">SQL</span>
+                            </div>
+                        </div>
+                        
+                        <div class="skill-category">
+                            <h3><i class="fas fa-bullseye"></i> Focus Areas</h3>
+                            <div class="focus-areas">
+                                <div class="focus-item">
+                                    <i class="fas fa-mobile-alt"></i>
+                                    <span>Mobile Applications</span>
+                                </div>
+                                <div class="focus-item">
+                                    <i class="fas fa-layer-group"></i>
+                                    <span>Full Stack Systems</span>
+                                </div>
+                                <div class="focus-item">
+                                    <i class="fas fa-bolt"></i>
+                                    <span>Real Time Applications</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                        <div class="stat-card">
+                            <i class="fas fa-rocket"></i>
+                            <h3>3+</h3>
+                            <p>Production Apps Shipped</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-layer-group"></i>
+                            <h3>10+</h3>
+                            <p>Technologies</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-certificate"></i>
+                            <h3>2</h3>
+                            <p>NPTEL Certifications</p>
+                        </div>
+                        <div class="stat-card">
+                            <i class="fas fa-university"></i>
+                            <h3>MCA</h3>
+                            <p>Pondicherry University</p>
+                        </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="container">
+            <h2 class="section-title gradient-text">Tech Stack</h2>
+            
+            <div class="tech-category">
+                <h3 class="category-title"><i class="fas fa-code"></i> Languages</h3>
+                <div class="skills-grid">
+                    <div class="skill-card" data-skill="85">
+                        <i class="devicon-java-plain colored"></i>
+                        <h4>Java</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="85"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="90">
+                        <i class="devicon-python-plain colored"></i>
+                        <h4>Python</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="88">
+                        <i class="devicon-dart-plain colored"></i>
+                        <h4>Dart</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="88"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="86">
+                        <i class="devicon-javascript-plain colored"></i>
+                        <h4>JavaScript</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="86"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="82">
+                        <i class="devicon-postgresql-plain colored"></i>
+                        <h4>SQL</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="82"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tech-category">
+                <h3 class="category-title"><i class="fas fa-mobile-alt"></i> Mobile</h3>
+                <div class="skills-grid">
+                    <div class="skill-card" data-skill="92">
+                        <i class="devicon-flutter-plain colored"></i>
+                        <h4>Flutter (Android &amp; iOS)</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="92"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="85">
+                        <i class="fas fa-sliders-h"></i>
+                        <h4>Provider / setState</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="85"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tech-category">
+                <h3 class="category-title"><i class="fas fa-globe"></i> Web</h3>
+                <div class="skills-grid">
+                    <div class="skill-card" data-skill="92">
+                        <i class="devicon-html5-plain colored"></i>
+                        <h4>HTML5</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="92"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="90">
+                        <i class="devicon-css3-plain colored"></i>
+                        <h4>CSS3</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="86">
+                        <i class="fab fa-js"></i>
+                        <h4>JavaScript ES6+</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="86"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="84">
+                        <i class="fas fa-exchange-alt"></i>
+                        <h4>REST APIs</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="84"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="82">
+                        <i class="devicon-flask-original colored"></i>
+                        <h4>Python Flask</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="82"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="80">
+                        <i class="fas fa-bolt"></i>
+                        <h4>FastAPI</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="80"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tech-category">
+                <h3 class="category-title"><i class="fas fa-cloud"></i> Databases &amp; Cloud</h3>
+                <div class="skills-grid">
+                    <div class="skill-card" data-skill="88">
+                        <i class="devicon-firebase-plain colored"></i>
+                        <h4>Firebase Firestore</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="88"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="86">
+                        <i class="devicon-supabase-plain colored"></i>
+                        <h4>Supabase (PostgreSQL)</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="86"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="80">
+                        <i class="devicon-mysql-plain colored"></i>
+                        <h4>MySQL</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="80"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="78">
+                        <i class="fas fa-database"></i>
+                        <h4>Offline Persistence</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="78"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tech-category">
+                <h3 class="category-title"><i class="fas fa-toolbox"></i> Tools</h3>
+                <div class="skills-grid">
+                    <div class="skill-card" data-skill="86">
+                        <i class="fab fa-git-alt"></i>
+                        <h4>Git</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="86"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="88">
+                        <i class="fab fa-github"></i>
+                        <h4>GitHub</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="88"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="90">
+                        <i class="fas fa-code"></i>
+                        <h4>VS Code</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="90"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="84">
+                        <i class="fab fa-android"></i>
+                        <h4>Android Studio</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="84"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="82">
+                        <i class="fas fa-map-marked-alt"></i>
+                        <h4>Google Maps API</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="82"></div>
+                        </div>
+                    </div>
+                    <div class="skill-card" data-skill="80">
+                        <i class="fas fa-bell"></i>
+                        <h4>FCM</h4>
+                        <div class="skill-bar">
+                            <div class="skill-progress" data-progress="80"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section class="projects" id="projects">
+        <div class="container">
+            <h2 class="section-title gradient-text">Featured Projects</h2>
+            <div class="projects-grid">
+                <!-- Project 1: RES-Q -->
+                <div class="project-flip-card">
+                    <div class="project-flip-inner">
+                        <div class="project-flip-front">
+                            <div class="project-icon">
+                                <i class="fas fa-ambulance"></i>
+                            </div>
+                            <h3>RES-Q</h3>
+                            <p>Jan 2026 - Real-time emergency response with SOS, live tracking, and dispatch automation.</p>
+                        </div>
+                        <div class="project-flip-back">
+                            <h3>RES-Q - Real-Time Emergency Response</h3>
+                            <div class="flip-tech-stack">
+                                <h4>Tech Stack</h4>
+                                <div class="flip-tech-badges">
+                                    <span class="tech-badge">Flutter</span>
+                                    <span class="tech-badge">Firebase Firestore</span>
+                                    <span class="tech-badge">Google Maps SDK</span>
+                                    <span class="tech-badge">FCM</span>
+                                </div>
+                            </div>
+                            <div class="flip-buttons">
+                                <button class="flip-btn flip-btn-primary" onclick="openModal(1)">
+                                    <i class="fas fa-eye"></i> View Project
+                                </button>
+                                <a href="https://github.com/prasathshiva81-stack/Res-Q" target="_blank" rel="noopener noreferrer" class="flip-btn flip-btn-secondary">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: GoLocal Mobile App -->
+                <div class="project-flip-card">
+                    <div class="project-flip-inner">
+                        <div class="project-flip-front">
+                            <div class="project-icon project-icon-2">
+                                <i class="fas fa-map-marked-alt"></i>
+                            </div>
+                            <h3>GoLocal</h3>
+                            <p>2025 - Hyperlocal services marketplace with AI-guided discovery and real-time data.</p>
+                        </div>
+                        <div class="project-flip-back">
+                            <h3>GoLocal - Hyperlocal Services Marketplace</h3>
+                            <div class="flip-tech-stack">
+                                <h4>Tech Stack</h4>
+                                <div class="flip-tech-badges">
+                                    <span class="tech-badge">Flutter</span>
+                                    <span class="tech-badge">Supabase</span>
+                                    <span class="tech-badge">PostgreSQL</span>
+                                    <span class="tech-badge">Google Maps API</span>
+                                    <span class="tech-badge">AI Chatbot</span>
+                                </div>
+                            </div>
+                            <div class="flip-buttons">
+                                <button class="flip-btn flip-btn-primary" onclick="openModal(2)">
+                                    <i class="fas fa-eye"></i> View Project
+                                </button>
+                                <a href="https://github.com/prasathshiva81-stack/golocal-app" target="_blank" rel="noopener noreferrer" class="flip-btn flip-btn-secondary">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3: Virtual Try-On System -->
+                <div class="project-flip-card">
+                    <div class="project-flip-inner">
+                        <div class="project-flip-front">
+                            <div class="project-icon project-icon-3">
+                                <i class="fas fa-tshirt"></i>
+                            </div>
+                            <h3>Virtual Try-On System</h3>
+                            <p>2025 - AI-powered web app for virtual clothing overlay with fast image processing.</p>
+                        </div>
+                        <div class="project-flip-back">
+                            <h3>Virtual Try-On System</h3>
+                            <div class="flip-tech-stack">
+                                <h4>Tech Stack</h4>
+                                <div class="flip-tech-badges">
+                                    <span class="tech-badge">HTML5</span>
+                                    <span class="tech-badge">CSS3</span>
+                                    <span class="tech-badge">JavaScript</span>
+                                    <span class="tech-badge">Python Flask</span>
+                                    <span class="tech-badge">OpenCV</span>
+                                </div>
+                            </div>
+                            <div class="flip-buttons">
+                                <button class="flip-btn flip-btn-primary" onclick="openModal(3)">
+                                    <i class="fas fa-eye"></i> View Project
+                                </button>
+                                <a href="https://github.com/prasathshiva81-stack/virtual_tryon" target="_blank" rel="noopener noreferrer" class="flip-btn flip-btn-secondary">
+                                    <i class="fab fa-github"></i> GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Modal -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <span class="modal-close" onclick="closeModal()">&times;</span>
+            <div id="modalBody">
+                <!-- Content will be injected by JavaScript -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Education Section -->
+    <section class="education" id="education">
+        <div class="container">
+            <h2 class="section-title">Education</h2>
+            <div class="education-timeline">
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>Master of Computer Applications (MCA)</h3>
+                        <h4>Pondicherry University, Puducherry</h4>
+                        <p class="education-duration">2024 - Present | Expected Graduation: May 2026</p>
+                        <span class="education-status">Currently Pursuing</span>
+                    </div>
+                </div>
+                <div class="education-card">
+                    <div class="education-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <div class="education-content">
+                        <h3>Bachelor of Computer Applications (BCA)</h3>
+                        <h4>Indira Gandhi College of Arts and Science, Puducherry</h4>
+                        <p class="education-duration">2021 - 2024</p>
+                        <span class="education-status">Completed</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements / Certifications -->
+    <section class="achievements" id="achievements">
+        <div class="container">
+            <h2 class="section-title gradient-text">Achievements &amp; Certifications</h2>
+            <div class="achievements-grid">
+                <div class="achievement-card">
+                    <h3>Certifications</h3>
+                    <ul>
+                        <li>Applied Accelerated Artificial Intelligence - NPTEL, 2025</li>
+                        <li>Joy of Computing using Python - NPTEL, 2025</li>
+                    </ul>
+                </div>
+                <div class="achievement-card">
+                    <h3>Achievements</h3>
+                    <ul>
+                        <li>Competed in Smart India Hackathon (SIH), representing Pondicherry University - India's largest national government-sponsored hackathon.</li>
+                        <li>Built and deployed 3 full-stack and mobile apps end-to-end, owning complete lifecycle from system design to production release.</li>
+                        <li>Completed 2 NPTEL certifications concurrently with full-time MCA coursework.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title gradient-text">Get In Touch</h2>
+            <p class="contact-subtitle">Open to internships, trainee, and entry-level roles in Flutter, Mobile, and Full-Stack Python.</p>
+            
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Phone</h3>
+                    <a href="tel:+918608646810">+91 86086 46810</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <a href="mailto:prasathshiva81@gmail.com">prasathshiva81@gmail.com</a>
+                </div>
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-download"></i>
+                    </div>
+                    <h3>Resume</h3>
+                    <a href="/assets/resume.pdf" target="_blank" rel="noopener noreferrer">Download CV</a>
+                </div>
+            </div>
+            
+            <div class="contact-social">
+                <h3>Connect With Me</h3>
+                <div class="social-links-large">
+                    <a href="https://github.com/prasathshiva81-stack" target="_blank" rel="noopener noreferrer" class="social-link-large" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                        <span>GitHub</span>
+                    </a>
+                    <a href="https://linkedin.com/in/siva-prasath-333704325" target="_blank" rel="noopener noreferrer" class="social-link-large" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                        <span>LinkedIn</span>
+                    </a>
+                    <a href="mailto:prasathshiva81@gmail.com" class="social-link-large" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                        <span>Email</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-left">
+                    <h3 class="footer-logo">SP<span class="dot">.</span></h3>
+                    <p>Building the future, one line of code at a time.</p>
+                </div>
+                <div class="footer-right">
+                    <div class="footer-links">
+                        <a href="#home">Home</a>
+                        <a href="#about">About</a>
+                        <a href="#skills">Tech Stack</a>
+                        <a href="#projects">Projects</a>
+                        <a href="#education">Education</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Siva Prasath K. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
